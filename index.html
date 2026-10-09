@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#123b37">
+	<title>CV Ramdhan Bayu Prasetyo</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- ALUR HALAMAN: profil di atas, informasi dan riwayat di tengah, penutup di bawah. -->
+	<main class="cv">
+		<!-- 1. KEPALA: nama, profesi, ringkasan, dan foto. -->
+		<header class="kepala">
+			<div class="pengantar">
+				<p class="label">Curriculum Vitae · 2026</p>
+				<h1>RAMDHAN</h1>
+				<p class="profesi">Mahasiswa Teknik Informatika</p>
+				<p class="ringkasan">Mahasiswa Teknik Informatika di Universitas Muhammadiyah Ponorogo, berasal dari Pacitan dan saat ini tinggal di Jenangan, Ponorogo. Memiliki minat pada desain grafis, pengembangan website, dan pemanfaatan teknologi AI. Bersemangat mempelajari hal baru serta berfokus membangun portofolio profesional, memperdalam kemampuan web development, dan menjajaki peluang kerja maupun penghasilan melalui teknologi.</p>
+			</div>
+			<div class="bingkai-foto">
+				<img src="foto-profil.jpg" alt="Foto profil Ramdhan Bayu Prasetyo">
+			</div>
+		</header>
+
+		<!-- 2. ISI: kolom samping berisi kontak, keahlian, dan minat. -->
+		<div class="isi-cv">
+			<aside class="kolom-samping" aria-label="Informasi dan keahlian">
+				<section class="bagian bagian-kontak">
+					<h2 class="judul-bagian"><span>01</span> Kontak</h2>
+					<ul class="daftar-kontak">
+						<li>
+							<span class="ikon-kontak ikon-wa" aria-hidden="true">
+								<img src="LogoWA.png" alt="">
+							</span>
+							<a href="https://wa.me/6283117584096">0831-1758-4096</a>
+						</li>
+						<li>
+							<span class="ikon-kontak" aria-hidden="true">L</span>
+							<span>Jenangan, Ponorogo</span>
+						</li>
+						<li>
+							<span class="ikon-kontak" aria-hidden="true">A</span>
+							<span>Pacitan, Jawa Timur</span>
+						</li>
+					</ul>
+				</section>
+
+				<section class="bagian bagian-keahlian">
+					<h2 class="judul-bagian"><span>02</span> Keahlian</h2>
+					<ul class="daftar-keahlian">
+						<li>Desain grafis</li>
+						<li>Penggunaan perangkat lunak desain grafis</li>
+						<li>Penulisan akademik</li>
+						<li>Pemrograman dasar C++</li>
+						<li>Pengembangan web dasar (HTML dan CSS)</li>
+						<li>Pemanfaatan AI</li>
+						<li>Adaptasi dan pembelajaran mandiri</li>
+					</ul>
+				</section>
+
+				<section class="bagian bagian-kekuatan">
+					<h2 class="judul-bagian"><span>03</span> Minat Karier</h2>
+					<ul class="daftar-kekuatan">
+						<li>Freelance desain grafis dan identitas visual</li>
+						<li>Pengembangan web</li>
+						<li>Pemanfaatan kecerdasan buatan untuk peluang kerja dan usaha</li>
+					</ul>
+				</section>
+			</aside>
+
+			<!-- Kolom utama berisi pengalaman dan pendidikan. -->
+			<div class="kolom-utama">
+				<section class="bagian bagian-pengalaman">
+					<h2 class="judul-bagian"><span>04</span> Pengalaman</h2>
+					<!-- Satu artikel mewakili satu pengalaman. -->
+					<div class="linimasa">
+						<article class="entri">
+							<div class="judul-entri">
+								<h3>Freelance desain grafis</h3>
+							</div>
+							<p class="info-entri">Mengerjakan desain logo dan stiker untuk produk makanan pada proyek berskala kecil, dengan pendekatan visual minimalis.</p>
+						</article>
+						<article class="entri">
+							<div class="judul-entri">
+								<h3>Belajar web development</h3>
+							</div>
+							<p class="info-entri">Merancang antarmuka website menggunakan HTML dan CSS, serta memperluas pemahaman tentang framework modern.</p>
+						</article>
+						<article class="entri">
+							<div class="judul-entri">
+								<h3>Eksperimen teknologi AI</h3>
+							</div>
+							<p class="info-entri">Mengeksplorasi pemanfaatan perangkat AI untuk mendukung proses desain dan meninjau potensinya bagi peluang kerja maupun usaha.</p>
+						</article>
+						<article class="entri">
+							<div class="judul-entri">
+								<h3>Pengalaman kerja di industri logistik</h3>
+							</div>
+							<p class="info-entri">Memperoleh pengalaman kerja di lingkungan industri logistik.</p>
+						</article>
+					</div>
+				</section>
+
+				<section class="bagian bagian-pendidikan riwayat-pendidikan">
+					<h2 class="judul-bagian"><span>05</span> Pendidikan</h2>
+					<div class="linimasa">
+						<article class="entri">
+							<div class="judul-entri">
+								<h3>Universitas Muhammadiyah Ponorogo</h3>
+							</div>
+							<p class="info-entri">Program Studi Teknik Informatika</p>
+						</article>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<!-- 3. KAKI: penutup halaman CV. -->
+		<footer class="kaki-cv"><span>CV · Ramdhan Bayu Prasetyo</span><span>Teknik Informatika</span></footer>
+	</main>
+</body>
+</html>

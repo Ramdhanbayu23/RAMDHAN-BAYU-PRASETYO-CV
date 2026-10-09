@@ -24,13 +24,13 @@ Fokus pengerjaan proyek ini meliputi:
 
 1. Unduh atau salin seluruh file proyek ke satu folder.
 2. Pastikan `foto-profil.jpg` dan `LogoWA.png` berada di folder yang sama dengan file HTML.
-3. Buka `Index.html` menggunakan browser.
+3. Buka `index.html` menggunakan browser.
 
 ## Struktur File
 
 ```text
 .
-├── Index.html       # Struktur dan isi CV
+├── index.html       # Struktur dan isi CV
 ├── style.css        # Gaya dan tata letak halaman
 ├── foto-profil.jpg  # Foto profil
 └── LogoWA.png       # Logo WhatsApp dengan latar transparan
