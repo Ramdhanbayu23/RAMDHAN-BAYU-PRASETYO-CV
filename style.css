@@ -1,0 +1,471 @@
+/* 1. DASAR: ukuran elemen, warna halaman, dan huruf */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 38px 20px;
+	color: #e7e3ef;
+	background-color: #08080c;
+	font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+	line-height: 1.5;
+}
+
+/* 2. LEMBAR CV */
+.cv {
+	width: 100%;
+	max-width: 1040px;
+	margin: 0 auto;
+	overflow: hidden;
+	border: 1px solid #292532;
+	background-color: #0d0c12;
+	box-shadow: 0 24px 70px #00000070;
+}
+
+/* 3. BAGIAN PROFIL: bidang miring menjadi aksen geometris */
+.kepala {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	gap: 36px;
+	min-height: 330px;
+	padding: 48px 58px;
+	overflow: hidden;
+	border-bottom: 5px solid #7c4dff;
+	color: #f5f2fa;
+	background-color: #0d0c12;
+}
+
+.kepala::before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 34%;
+	height: 100%;
+	background-color: #24163e;
+	clip-path: polygon(72% 0, 100% 0, 100% 100%, 0 100%);
+	content: "";
+}
+
+.kepala::after {
+	position: absolute;
+	top: 34px;
+	right: 32px;
+	width: 60px;
+	height: 60px;
+	border: 1px solid #a885f799;
+	transform: rotate(45deg);
+	content: "";
+}
+
+.pengantar {
+	position: relative;
+	z-index: 1;
+	flex: 1;
+}
+
+.label {
+	margin: 0 0 12px;
+	padding-left: 10px;
+	border-left: 3px solid #a56dff;
+	color: #c7a7ff;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h1, h2, h3, p {
+	margin-top: 0;
+}
+
+h1 {
+	margin-bottom: 8px;
+	font-family: "Space Grotesk", "Segoe UI", sans-serif;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.profesi {
+	margin-bottom: 22px;
+	color: #cbc5d7;
+	font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.ringkasan {
+	max-width: 530px;
+	margin-bottom: 0;
+	color: #aaa5b5;
+	font-size: 14px;
+}
+
+.bingkai-foto {
+	position: relative;
+	z-index: 1;
+	width: 210px;
+	height: 260px;
+	flex-shrink: 0;
+	padding: 7px;
+	border: 2px solid #d9ccf3;
+	background-color: #211b2c;
+	box-shadow: 8px 8px 0 #7c4dff;
+}
+
+.bingkai-foto img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #292532;
+	object-fit: cover;
+	object-position: center 25%;
+	clip-path: polygon(0 0, 100% 0, 100% 92%, 92% 100%, 0 100%);
+}
+
+/* 4. ISI CV: informasi samping dan riwayat utama */
+.isi-cv {
+	display: flex;
+	align-items: flex-start;
+	gap: 42px;
+	padding: 48px 58px 56px;
+	background-color: #0d0c12;
+}
+
+.kolom-samping {
+	width: 285px;
+	flex-shrink: 0;
+	padding: 22px 22px 22px 18px;
+	border-left: 3px solid #8657e8;
+	background-color: #14121b;
+}
+
+.kolom-utama {
+	flex: 1;
+	min-width: 0;
+}
+
+.bagian {
+	margin-bottom: 34px;
+}
+
+.judul-bagian {
+	display: flex;
+	align-items: center;
+	gap: 11px;
+	margin-bottom: 17px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #332d40;
+	color: #ece8f4;
+	font-family: "Space Grotesk", "Segoe UI", sans-serif;
+	font-size: 17px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.judul-bagian span {
+	display: flex;
+	width: 27px;
+	height: 27px;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #8c5be8;
+	border-radius: 50%;
+	color: #f8f4ff;
+	background-color: #7142ce;
+	font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+	font-size: 11px;
+}
+
+/* 5. DAFTAR KONTAK, KEAHLIAN, MINAT, DAN TUGAS */
+.daftar-kontak,
+.daftar-keahlian,
+.daftar-kekuatan,
+.daftar-tugas,
+.linimasa {
+	display: flex;
+	flex-direction: column;
+}
+
+.daftar-kontak,
+.daftar-keahlian,
+.daftar-kekuatan,
+.daftar-tugas {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.daftar-kontak {
+	gap: 13px;
+}
+
+.daftar-kontak a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.daftar-kontak a:hover {
+	color: #bd9aff;
+	text-decoration: underline;
+}
+
+.daftar-kontak li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 13px;
+	word-break: break-word;
+}
+
+.ikon-kontak {
+	display: flex;
+	width: 34px;
+	height: 34px;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #8254d7;
+	border-radius: 50%;
+	color: #c4a5ff;
+	background-color: #17141f;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.ikon-wa {
+	padding: 0;
+	border: 0;
+	border-radius: 6px;
+	background-color: transparent;
+	overflow: hidden;
+}
+
+.ikon-wa img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.daftar-kontak li:nth-child(2) .ikon-kontak {
+	border-color: #615b6d;
+	color: #d0cad9;
+}
+
+.daftar-kontak li:nth-child(3) .ikon-kontak {
+	border-color: #817a8d;
+	color: #e2ddeb;
+}
+
+.daftar-keahlian {
+	gap: 8px;
+	padding-left: 18px;
+	list-style: disc;
+}
+
+.daftar-kekuatan {
+	gap: 10px;
+	padding-left: 18px;
+	list-style: disc;
+}
+
+.daftar-keahlian li,
+.daftar-kekuatan li {
+	font-size: 13px;
+}
+
+/* 6. KARTU PENGALAMAN DAN PENDIDIKAN */
+.linimasa {
+	gap: 16px;
+}
+
+.entri {
+	padding: 14px 16px;
+	border: 1px solid #302b39;
+	border-left: 3px solid #8657e8;
+	background-color: #14121a;
+	box-shadow: 0 4px 14px #00000024;
+}
+
+.judul-entri {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 4px 12px;
+	margin-bottom: 3px;
+}
+
+.entri h3 {
+	margin-bottom: 0;
+	color: #f0edf5;
+	font-family: "Space Grotesk", "Segoe UI", sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.periode-entri {
+	color: #bd9aff;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.info-entri {
+	margin-bottom: 8px;
+	color: #aaa5b5;
+	font-size: 12px;
+}
+
+.daftar-tugas {
+	gap: 6px;
+	padding-left: 15px;
+	list-style: disc;
+}
+
+.daftar-tugas li {
+	color: #bdb8c6;
+	font-size: 13px;
+}
+
+.riwayat-pendidikan .entri {
+	padding-bottom: 2px;
+}
+
+.riwayat-pendidikan .periode-entri {
+	display: block;
+	margin-top: 2px;
+}
+
+/* 7. BAGIAN PENUTUP CV */
+.kaki-cv {
+	display: flex;
+	justify-content: space-between;
+	gap: 14px;
+	padding: 15px 58px;
+	border-top: 3px solid #7c4dff;
+	color: #d7d2df;
+	background-color: #100e15;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+/* 8. ATURAN UNTUK LAYAR TABLET */
+@media (max-width: 760px) {
+	body {
+		padding: 0;
+		background-color: #08080c;
+	}
+
+	.cv {
+		box-shadow: none;
+	}
+
+	.kepala {
+		gap: 24px;
+		padding: 38px 28px;
+	}
+
+	h1 {
+		font-size: 42px;
+	}
+
+	.isi-cv {
+		gap: 30px;
+		padding: 38px 28px;
+	}
+
+	.kolom-samping {
+		width: 235px;
+		padding: 18px 16px;
+	}
+
+	.kaki-cv {
+		padding-right: 28px;
+		padding-left: 28px;
+	}
+}
+
+/* 9. ATURAN UNTUK LAYAR HP */
+@media (max-width: 560px) {
+	.kepala {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		gap: 26px;
+		padding: 32px 24px 38px;
+	}
+
+	.kepala::before {
+		width: 45%;
+	}
+
+	.bingkai-foto {
+		width: 142px;
+		height: 180px;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+	.profesi {
+		margin-bottom: 14px;
+		font-size: 20px;
+	}
+
+	.isi-cv {
+		flex-direction: column;
+		gap: 28px;
+		padding: 30px 24px 38px;
+	}
+
+	.kolom-samping {
+		width: 100%;
+		padding: 18px;
+	}
+
+	.bagian {
+		margin-bottom: 28px;
+	}
+
+	.kaki-cv {
+		padding: 14px 24px;
+	}
+}
+
+/* 10. ATURAN CETAK ATAU SIMPAN SEBAGAI PDF */
+@media print {
+	@page {
+		size: A4;
+		margin: 0;
+	}
+
+	body {
+		padding: 0;
+		background-color: #fff;
+	}
+
+	.cv {
+		width: 100%;
+		box-shadow: none;
+	}
+
+	.kepala {
+		min-height: 280px;
+		padding: 36px 46px;
+	}
+
+	.isi-cv {
+		gap: 38px;
+		padding: 36px 46px 42px;
+	}
+
+	.kaki-cv {
+		padding-right: 46px;
+		padding-left: 46px;
+	}
+}
